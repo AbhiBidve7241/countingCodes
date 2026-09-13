@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="cGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1d4ed8" />
+      <stop offset="50%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+    <linearGradient id="codeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <filter id="subtleShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#0f172a" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Outer Stylized C Contour -->
+  <path
+    d="M 68 22 
+       C 40 10, 12 28, 12 50 
+       C 12 72, 40 90, 68 78 
+       C 76 74, 82 66, 85 58 
+       L 73 58 
+       C 70 63, 64 68, 58 70 
+       C 35 77, 24 62, 24 50 
+       C 24 38, 35 23, 58 30 
+       C 64 32, 70 37, 73 42 
+       L 85 42 
+       C 82 34, 76 26, 68 22 Z"
+    fill="url(#cGrad)"
+    filter="url(#subtleShadow)"
+  />
+
+  <!-- Bottom tail of C -->
+  <path
+    d="M 16 68 L 4 68 L 4 74 L 20 74 Z"
+    fill="url(#cGrad)"
+  />
+
+  <!-- Center < Bracket -->
+  <path
+    d="M 40 40 L 32 50 L 40 60 L 44 57 L 38 50 L 44 43 Z"
+    fill="url(#codeGrad)"
+    filter="url(#subtleShadow)"
+  />
+
+  <!-- Center Slash / -->
+  <path
+    d="M 52 35 L 47 65 L 51 65 L 56 35 Z"
+    fill="url(#codeGrad)"
+    filter="url(#subtleShadow)"
+  />
+
+  <!-- Center > Bracket -->
+  <path
+    d="M 60 40 L 68 50 L 60 60 L 56 57 L 62 50 L 56 43 Z"
+    fill="url(#codeGrad)"
+    filter="url(#subtleShadow)"
+  />
+</svg>

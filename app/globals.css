@@ -1,0 +1,60 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@theme inline {
+  --color-background: var(--background); --color-foreground: var(--foreground); --color-card: var(--card); --color-card-foreground: var(--card-foreground); --color-popover: var(--popover); --color-popover-foreground: var(--popover-foreground); --color-primary: var(--primary); --color-primary-foreground: var(--primary-foreground); --color-secondary: var(--secondary); --color-secondary-foreground: var(--secondary-foreground); --color-muted: var(--muted); --color-muted-foreground: var(--muted-foreground); --color-accent: var(--accent); --color-accent-foreground: var(--accent-foreground); --color-border: var(--border); --color-input: var(--input); --color-ring: var(--ring); --color-sky: var(--sky); --color-sky-foreground: var(--sky-foreground); --color-mint: var(--mint); --color-mint-foreground: var(--mint-foreground); --color-pink: var(--pink); --color-pink-foreground: var(--pink-foreground); --color-yellow: var(--yellow); --color-yellow-foreground: var(--yellow-foreground); --font-sans: 'DM Sans', sans-serif; --font-heading: 'Plus Jakarta Sans', sans-serif;
+}
+:root { color-scheme: light; --background: oklch(0.985 0.008 95); --foreground: oklch(0.22 0.025 255); --card: oklch(1 0 0); --card-foreground: oklch(0.22 0.025 255); --popover: oklch(1 0 0); --popover-foreground: oklch(0.22 0.025 255); --primary: oklch(0.62 0.18 242); --primary-foreground: oklch(1 0 0); --secondary: oklch(0.95 0.02 240); --secondary-foreground: oklch(0.28 0.08 242); --muted: oklch(0.96 0.012 245); --muted-foreground: oklch(0.53 0.035 250); --accent: oklch(0.95 0.02 240); --accent-foreground: oklch(0.28 0.08 242); --border: oklch(0.9 0.022 240); --input: oklch(0.9 0.022 240); --ring: oklch(0.62 0.18 242); --sky: oklch(0.92 0.06 235); --sky-foreground: oklch(0.35 0.11 242); --mint: oklch(0.91 0.08 155); --mint-foreground: oklch(0.29 0.1 155); --pink: oklch(0.93 0.065 350); --pink-foreground: oklch(0.45 0.13 350); --yellow: oklch(0.94 0.08 90); --yellow-foreground: oklch(0.42 0.12 75); --radius: 0.85rem; }
+* { @apply border-border outline-ring/50; }
+html { background: var(--background); }
+body { @apply bg-background text-foreground font-sans; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+.font-heading { font-family: 'Plus Jakarta Sans', sans-serif; }
+.nav-link { @apply flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-semibold text-muted-foreground transition hover:bg-muted hover:text-foreground; }
+.nav-link-active { @apply bg-sky text-sky-foreground; }
+.page-wrap { @apply mx-auto max-w-7xl px-5 py-12 lg:px-8 lg:py-16; }
+.page-title { @apply mt-2 font-heading text-4xl font-extrabold tracking-tight; }
+.section-title { @apply font-heading text-lg font-bold; }
+.eyebrow { @apply flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-primary; }
+.button-primary { @apply flex w-fit items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-sm font-bold text-primary-foreground transition hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/20; }
+.button-secondary { @apply flex w-fit items-center justify-center gap-2 rounded-xl border border-border bg-card px-5 py-3.5 text-sm font-bold transition hover:bg-muted; }
+.hero-grid { @apply grid items-center gap-8 lg:grid-cols-[1.05fr_0.95fr]; }
+.learning-card { @apply rounded-3xl border border-border bg-card p-7 shadow-[0_24px_70px_-28px_rgba(41,102,168,0.45)]; }
+.icon-box { @apply flex h-11 w-11 items-center justify-center rounded-2xl; }
+.progress-track { @apply h-2 overflow-hidden rounded-full bg-muted; }
+.progress-fill { @apply h-full rounded-full bg-primary transition-all; }
+.float-chip { @apply absolute flex items-center gap-2 rounded-full border border-border bg-card px-4 py-3 text-sm font-bold shadow-lg; }
+.float-chip-one { right: -1rem; top: 18%; }
+.float-chip-two { bottom: 10%; left: -1.5rem; }
+.panel { @apply rounded-2xl border border-border bg-card p-5 shadow-sm sm:p-7; }
+.metric-icon { @apply flex h-11 w-11 items-center justify-center rounded-2xl; }
+.metric-icon.sky, .course-art.sky, .mini-art.sky, .activity-dot.sky { @apply bg-sky text-sky-foreground; }
+.metric-icon.mint, .course-art.mint, .mini-art.mint, .activity-dot.mint { @apply bg-mint text-mint-foreground; }
+.metric-icon.pink, .course-art.pink, .mini-art.pink, .activity-dot.pink { @apply bg-pink text-pink-foreground; }
+.course-art.yellow, .mini-art.yellow { @apply bg-yellow text-yellow-foreground; }
+.course-card { @apply overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition hover:-translate-y-1 hover:shadow-xl; }
+.course-art { @apply flex h-36 items-center justify-between p-6 font-heading text-4xl font-extrabold; }
+.course-art svg { @apply opacity-60; }
+.mini-art { @apply flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-xs font-extrabold; }
+.activity-dot { @apply flex h-9 w-9 shrink-0 items-center justify-center rounded-xl; }
+.goal-ring { @apply mx-auto flex h-36 w-36 flex-col items-center justify-center rounded-full border-[14px] border-sky text-center font-heading text-3xl font-extrabold; }
+.goal-ring small { @apply text-xs font-medium text-muted-foreground; }
+.search-box { @apply flex items-center gap-2 rounded-xl border border-border bg-card px-3.5 py-2.5 text-muted-foreground; }
+.search-box input { @apply w-36 bg-transparent text-sm outline-none placeholder:text-muted-foreground; }
+.filter, .filter-active { @apply whitespace-nowrap rounded-full px-4 py-2 text-sm font-semibold; }
+.filter { @apply bg-muted text-muted-foreground hover:bg-sky hover:text-sky-foreground; }
+.filter-active { @apply bg-primary text-primary-foreground; }
+.answer { @apply flex w-full items-center gap-3.5 rounded-xl border border-border bg-card p-4 text-left text-sm font-medium transition cursor-pointer hover:border-primary/60 hover:bg-sky/30 disabled:cursor-default; }
+.answer > span:first-child { @apply flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-muted font-bold text-muted-foreground text-xs transition border border-border/50; }
+.answer > span:last-child { @apply flex-1 text-foreground leading-relaxed text-sm font-normal text-left; }
+.answer-selected { @apply border-primary bg-sky/50 text-foreground shadow-xs; }
+.answer-selected > span:first-child { @apply bg-primary text-primary-foreground border-primary; }
+.answer-correct { @apply border-emerald-500 bg-emerald-500/15 text-foreground font-medium; }
+.answer-correct > span:first-child { @apply bg-emerald-500 text-white border-emerald-500; }
+.answer-incorrect { @apply border-rose-500 bg-rose-500/15 text-foreground font-medium; }
+.answer-incorrect > span:first-child { @apply bg-rose-500 text-white border-rose-500; }
+.settings-row { @apply flex w-full items-center justify-between py-4 text-left font-medium transition hover:text-primary; }
+@media (max-width: 640px) { .float-chip-one { right: -0.5rem; } .float-chip-two { left: -0.5rem; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; } }
